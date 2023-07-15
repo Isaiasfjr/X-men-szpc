@@ -56,8 +56,8 @@ personagem.classList.add("selecionado");
 })
 
 function alterarDescricaoPersonagem(personagem) {
-    const descricaoPersonagem = document.getElementById("descricao-personagens");
-    descricaoPersonagem.innerText = personagem.getElementById("data-description");
+    const descricaoPersonagem = document.getElementById("descricao-personagem");
+    descricaoPersonagem.innerText = personagem.getAttribute("data-description");
 }
 
 function alterarNomePersonagemSelecionado(personagem) {
@@ -67,6 +67,7 @@ function alterarNomePersonagemSelecionado(personagem) {
 
 function alterarImagemPersonagemSelecionado(personagem) {
     const imagemPersonagemGrande = document.querySelector(".personagem-grande");
+
     // passo 2 - alterar a imagem do personagem grande
     const idPersonagem = personagem.attributes.id.value;
     imagemPersonagemGrande.src = `./src/imagens/imagens/card-${idPersonagem}.png`;
